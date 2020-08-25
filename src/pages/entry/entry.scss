@@ -1,0 +1,18 @@
+page-entry {
+  .set-bg{
+    background-image: url("../assets/img/splash-bg.png");
+    background-size: auto;
+  }
+  .main-box{
+    background: #f4f4f4;
+    margin: 130pt 15pt;
+    padding: 20pt 10pt;
+    border-radius: 10px;
+  }
+  .btn-div{
+    margin: 13pt 32pt;
+    button{
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<ion-content>
+  <div text-center class="signUp-text text-green bigger-text bold-font">SIGN UP</div>
+  <div text-center class="sub-heading small-text text-grey">Reference site about lorem ipsum, giving information on its origins..</div>
+  <form padding [formGroup]="signUpForm">
+    <ion-item>
+      <ion-label floating><ion-icon name="person"></ion-icon><span margin-left>Username</span></ion-label>
+      <ion-input class='full-input' type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of error_messages.username">
+        <div class="error-message"
+             *ngIf="signUpForm.get('username').hasError(error.type) && (signUpForm.get('username').dirty || signUpForm.get('username').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label floating><ion-icon name="mail"></ion-icon><span margin-left>Email</span></ion-label>
+      <ion-input class='full-input' type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of error_messages.email">
+        <div class="error-message"
+             *ngIf="signUpForm.get('email').hasError(error.type) && (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label floating><ion-icon name="call"></ion-icon><span margin-left>Phone No</span></ion-label>
+      <ion-input class='full-input' type="number" formControlName="mobileNumber"></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of error_messages.mobileNumber">
+        <div class="error-message"
+             *ngIf="signUpForm.get('mobileNumber').hasError(error.type) && (signUpForm.get('mobileNumber').dirty || signUpForm.get('mobileNumber').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item>
+      <ion-label floating><ion-icon name="lock"></ion-icon><span margin-left>Create Password</span></ion-label>
+      <ion-input class='full-input' type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of error_messages.password">
+        <div class="error-message"
+             *ngIf="signUpForm.get('password').hasError(error.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item no-lines>
+      <span class="medium-text" item-right>Forgot Password?</span>
+    </ion-item>
+    <div class="btn-div">
+      <button (click)="signUp()" ion-button full round>Sign Up</button>
+    </div>
+  </form>
+  <div text-center class="medium-text bold-font">Or Login With</div>
+  <div text-center margin-top>
+    <span><img src="assets/img/fb.png"></span>
+    <span><img src="assets/img/google.png"></span>
+  </div>
+  <div class="medium-text" margin-top text-center margin-bottom>
+    <span>Already have an account?</span><span class="text-green" (click)="login()">LOGIN</span>
+  </div>
+
+</ion-content>
