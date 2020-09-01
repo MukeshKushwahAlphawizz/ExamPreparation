@@ -1,0 +1,35 @@
+page-all-question {
+    .segment-modal {
+        background: #8080801c;
+        color: black !important;
+    }
+
+    .segment_section {
+        color: black !important;
+    }
+
+    .segment_section.segment-button.segment-activated {
+        color: #1DBF73 !important;
+    }
+
+    .segment_section.segment-button {
+        text-transform: none;
+        border-bottom-width: 5px;
+    }
+
+    .solid {
+        border-style: solid;
+        color: #1DBF73;
+    }
+
+    p.solid-red {
+        border-style: solid;
+        color: #e45959;
+    }
+
+    .medium-text{
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+}

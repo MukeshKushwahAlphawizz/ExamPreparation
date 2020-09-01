@@ -1,0 +1,72 @@
+page-all-question-metrics {
+  .head{
+    margin: 20pt 0 10pt 0 !important;
+  }
+  .status-div{
+    margin-top: 25pt;
+  }
+  .cover{
+    color: white;
+    margin: 5px 15px;
+    border-radius: 15px;
+  }
+  .black-cover{
+    background-color: #515151;
+  }
+  .grey-cover{
+    background-color: #EBEBEB;
+  }
+  .round-box{
+    box-shadow: 1px 3px 4px #c8c7cc;
+    border-radius: 10px;
+  }
+  .correct-per{
+    font-size: 2.7rem;
+  }
+  .average{
+    border-top: 3px solid #DF7701;
+  }
+  .fail{
+    border-top: 3px solid red;
+  }
+  .pass{
+    border-top: 3px solid green;
+  }
+
+
+  .progress {
+    height: 40px;
+    position: absolute;
+    width: 80%;
+    overflow: hidden;
+    background-color: #EBEBEB;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .progress-bar-success {
+    background-color: #1DBF73;
+    position: absolute;
+    border-radius: 25px;
+  }
+  .progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+  }
+  .progress-bar-warning {
+    background-color: #515151;
+    border-radius: 0 25px 25px 0;
+  }
+  .progress-bar-danger {
+    background-color: #d9534f;
+  }
+}

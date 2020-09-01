@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div padding>
+    <div class="row" text-center>
+      <div col-4>
+        <circle-progress
+          [percent]="25"
+          [radius]="45"
+          [outerStrokeWidth]="10"
+          [innerStrokeWidth]="10"
+          [outerStrokeColor]="'#43BF73'"
+          [innerStrokeColor]="'#CBE8EF'"
+          [animation]="true"
+          [subtitleFontSize]="30"
+          [showSubtitle]="false"
+          [animationDuration]="300"
+          [showUnits]="true"
+          [titleColor]="subtitleCorrectColor">
+        </circle-progress>
+        <div>Correct</div>
+      </div>
+      <div col-4>
+        <circle-progress
+          [percent]="50"
+          [radius]="45"
+          [outerStrokeWidth]="10"
+          [innerStrokeWidth]="10"
+          [outerStrokeColor]="'#D61C00'"
+          [innerStrokeColor]="'#CBE8EF'"
+          [animation]="true"
+          [subtitleFontSize]="30"
+          [showSubtitle]="false"
+          [animationDuration]="300"
+          [showUnits]="true"
+          [titleColor]="subtitleCorrectColor">
+        </circle-progress>
+        <div>Incorrect</div>
+      </div>
+      <div col-4>
+        <circle-progress
+          [percent]="65"
+          [radius]="45"
+          [outerStrokeWidth]="10"
+          [innerStrokeWidth]="10"
+          [outerStrokeColor]="'#243A5B'"
+          [innerStrokeColor]="'#CBE8EF'"
+          [animation]="true"
+          [subtitleFontSize]="30"
+          [showSubtitle]="false"
+          [animationDuration]="300"
+          [showUnits]="true"
+          [titleColor]="subtitleCorrectColor">
+        </circle-progress>
+        <div>Remaining</div>
+      </div>
+    </div>
+
+    <ion-card>
+      <ion-card-content>
+        <canvas height="280" #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <div text-center class="round-grey-bg">
+      <div class="medium-text bold-font">Days Until Exam</div>
+      <div class="bold-font big-text text-green">Tap To Set</div>
+    </div>
+  </div>
+
+  <div margin-left text-left class="medium-text">Last Exams</div>
+  <div class="more">
+    <ion-item no-lines>
+      <div class="medium-text">20 August 2020 at 2:00 PM</div>
+      <div class="medium-text" item-right>50%</div><ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+    <div class="saperator"></div>
+
+    <ion-item no-lines>
+      <div class="medium-text">20 August 2020 at 2:00 PM</div>
+      <div class="medium-text" item-right>50%</div><ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+    <div class="saperator"></div>
+
+    <ion-item no-lines>
+      <div class="medium-text">20 August 2020 at 2:00 PM</div>
+      <div class="medium-text" item-right>50%</div><ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+    <div class="saperator"></div>
+
+    <ion-item no-lines>
+      <div class="medium-text">20 August 2020 at 2:00 PM</div>
+      <div class="medium-text" item-right>50%</div><ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+    <div class="saperator"></div>
+
+    <ion-item no-lines>
+      <div class="medium-text">20 August 2020 at 2:00 PM</div>
+      <div class="medium-text" item-right>50%</div><ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+    <div class="saperator"></div>
+  </div>
+</ion-content>

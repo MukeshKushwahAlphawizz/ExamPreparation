@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AccountInfoPage page.
+ * Generated class for the QuestionStatusTabPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,19 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-account-info',
-  templateUrl: 'account-info.html',
+  selector: 'page-question-status-tab',
+  templateUrl: 'question-status-tab.html',
 })
-export class AccountInfoPage {
+export class QuestionStatusTabPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountInfoPage');
+    console.log('ionViewDidLoad QuestionStatusTabPage');
   }
 
-  editProfile() {
-    this.navCtrl.push('EditProfilePage');
-  }
 }

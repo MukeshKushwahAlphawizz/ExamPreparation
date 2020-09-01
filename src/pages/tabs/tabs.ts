@@ -12,7 +12,7 @@ import { Tab1Root, Tab2Root, Tab3Root } from '../';
 export class TabsPage {
   tab1Root: any = 'HomePage';
   tab2Root: any = 'PracticePage';
-  tab3Root: any = 'HomePage';
+  tab3Root: any = 'ExamReadinessPage';
   tab4Root: any = 'SettingPage';
 
   tab1Title = "Dashboard";

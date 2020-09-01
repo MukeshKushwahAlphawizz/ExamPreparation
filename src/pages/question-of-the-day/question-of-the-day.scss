@@ -1,0 +1,30 @@
+page-question-of-the-day {
+    .round-box {
+        box-shadow: 1px 3px 4px #c8c7cc;
+        border-radius: 10px;
+    }
+
+    .square-box {
+        box-shadow: 1px 3px 4px #c8c7cc;
+        border-bottom: 1px solid #80808052;
+    }
+
+    .list-table {
+        border-radius: 10px;
+    }
+
+    .btn-start {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        padding: 6%;
+    }
+
+    .submit-btn {
+        padding: 25px;
+        border-radius: 20px;
+        margin: auto;
+        display: block;
+        margin-top: 12%;
+    }
+}

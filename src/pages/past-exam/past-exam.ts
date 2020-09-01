@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AccountInfoPage page.
+ * Generated class for the PastExamPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,19 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-account-info',
-  templateUrl: 'account-info.html',
+  selector: 'page-past-exam',
+  templateUrl: 'past-exam.html',
 })
-export class AccountInfoPage {
+export class PastExamPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountInfoPage');
+    console.log('ionViewDidLoad PastExamPage');
   }
 
-  editProfile() {
-    this.navCtrl.push('EditProfilePage');
+  allQuestionMetrics() {
+    this.navCtrl.push('AllQuestionMetricsPage');
   }
 }

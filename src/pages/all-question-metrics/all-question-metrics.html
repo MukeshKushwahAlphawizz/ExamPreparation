@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center>
+    <h3 class="head bold-font">24 August 2020</h3>
+    <div class="small-text">2:30 PM</div>
+    <div style="margin-top: 10pt" class="small-text">Question Metrics</div>
+    <div padding>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" [ngStyle]="{width:correct}">
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{width:incorrect}">
+        </div>
+        <!--<div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">
+          Danger
+        </div>-->
+      </div>
+    </div>
+    <div class="row small-text status-div">
+      <div col-1></div>
+      <div col-3>
+        <div>Correct</div>
+        <div class="cover background-green">5</div>
+      </div>
+      <div col-3>
+        <div>Incorrect</div>
+        <div class="cover black-cover">1</div>
+      </div>
+      <div col-3>
+        <div>Total</div>
+        <div class="cover grey-cover">10</div>
+      </div>
+      <div col-1></div>
+    </div>
+
+    <div class="row" text-center>
+      <div col-6>
+        <div class="round-box" padding margin-bottom margin-top>
+          <div class="medium-text">Exam Score</div>
+          <div margin-top class="correct-per bold-font text-green">50%</div>
+        </div>
+      </div>
+      <div col-6>
+        <div class="round-box" padding margin-bottom margin-top>
+          <div class="medium-text">Time on Exam</div>
+          <div margin-top class="correct-per bold-font text-green">1:33</div>
+        </div>
+      </div>
+    </div>
+
+    <ion-item class="round-box medium-text" no-lines>
+      <div class="no-wrap" style="padding-left: 5pt">Review all questions</div>
+      <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+    </ion-item>
+
+    <div *ngFor="let ques of allQuestionList">
+      <ion-item no-padding margin-top class="medium-text" [ngClass]="getColor(ques)">
+        <div class="no-wrap" style="padding-left: 5pt">
+          <div class="text-grey">{{ques.subject}}</div>
+          <div>{{ques.result}} of {{ques.total}} Correct</div>
+        </div>
+        <div item-right class="text-orange">{{getPercent(ques)}}%</div><ion-icon class="text-orange" item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

@@ -1,3 +1,30 @@
 page-edit-profile {
-
+  .user-icon{
+    font-size: 7rem;
+    border: 1px solid;
+    padding: 8pt 16pt;
+    border-radius: 50%;
+    background: #1dbf7375;
+    height: 70pt;
+    width: 70pt;
+  }
+  .plus-icon{
+    position: absolute;
+    font-size: 3rem;
+    box-shadow: 2px 7px 5px 2px #4242422e;
+    border-radius: 50%;
+    margin-top: 10pt;
+    margin-left: -10pt;
+  }
+  .input-data{
+    border: none;
+    box-shadow: 0px 2px 5px 1px #dedede;
+    width: 100%;
+    padding: 7pt 10pt;
+    border-radius: 10px;
+    margin-top: 5pt;
+  }
+  .save-div{
+    margin: 30pt;
+  }
 }

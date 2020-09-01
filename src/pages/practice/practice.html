@@ -13,13 +13,18 @@
 
   <ion-item (click)="isSubject === 1 ? isSubject = 0 : isSubject = 1" margin-top class="round-box" no-lines>
     <ion-icon no-margin item-left name="md-book"></ion-icon>
-    <div item-start class="medium-text">Select Subject</div>
+    <div item-start class="medium-text">{{selectedSubject}}</div>
     <ion-icon item-right no-margin name="ios-arrow-down"></ion-icon>
   </ion-item>
   <div *ngIf="isSubject" class="round-box" style="padding: 2pt 0pt 4pt 12pt;">
-    <ion-item no-padding margin-top>Subject 1</ion-item>
-    <ion-item no-padding>Subject 2</ion-item>
-    <ion-item no-padding no-lines>Subject 3</ion-item>
+    <ion-item *ngFor="let subject of subjectList" no-padding margin-top>
+      <ion-label>{{subject.name}}</ion-label>
+      <ion-radio value="{{subject.name}}" (ionSelect)="selectSubject(subject)"></ion-radio>
+    </ion-item>
+    <ion-item no-padding margin-top no-lines>
+      <ion-label>Subject All</ion-label>
+      <ion-radio value="SubjectAll" (ionSelect)="selectSubject({name:'Subject All'})"></ion-radio>
+    </ion-item>
   </div>
   <div class="row" text-center margin-top>
     <div col-6>
@@ -38,22 +43,24 @@
 
   <ion-item (click)="isQuestions === 1 ? isQuestions = 0 : isQuestions = 1" margin-top class="round-box" no-lines>
     <ion-icon no-margin item-left name="chatboxes"></ion-icon>
-    <div item-start class="medium-text">Questions</div>
+    <div item-start class="medium-text">{{selectedQuestion}}</div>
     <div item-right><span margin-right class="small-text">20 of 20</span><ion-icon no-margin name="ios-arrow-down"></ion-icon></div>
   </ion-item>
   <div *ngIf="isQuestions" class="round-box" style="padding: 2pt 0pt 4pt 12pt;">
-    <ion-item no-padding margin-top>Unanswered Questions</ion-item>
-    <ion-item no-padding>Incorrect Questions</ion-item>
-    <ion-item no-padding no-lines>Correct Questions</ion-item>
+    <ion-item (click)="selectQuestions('Need To Be Any')" no-padding margin-top>Need To Be Any</ion-item>
+    <ion-item (click)="selectQuestions('Unanswered Questions')" no-padding>Unanswered Questions</ion-item>
+    <ion-item (click)="selectQuestions('Incorrect Questions')" no-padding>Incorrect Questions</ion-item>
+    <ion-item (click)="selectQuestions('Correct Questions')" no-padding no-lines>Correct Questions</ion-item>
+    <ion-item (click)="selectQuestions('Flagged Questions')" no-padding no-lines>Flagged Questions</ion-item>
   </div>
 
-  <ion-item no-lines class="medium-text" style="margin: 20pt 0">
+  <!--<ion-item no-lines class="medium-text" style="margin: 20pt 0">
     <div item-left>Flagged Questions</div>
     <div item-right class="row">
       <span margin-right style="margin-top: 8px" class="small-text">20 of 20</span>
       <ion-toggle no-margin no-padding [(ngModel)]="flaggedQuestion" (ionChange)="selectFlagged($event)"></ion-toggle>
     </div>
-  </ion-item>
+  </ion-item>-->
 
   <div class="round-box" padding text-center>
     <div margin-top>How Many Questions?</div>

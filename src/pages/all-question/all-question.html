@@ -1,0 +1,200 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center class="large-text bold-font" padding margin>All Questions</div>
+  <ion-segment class="segment-modal" [(ngModel)]="segmentModel" color="primary" (ionChange)="segmentChanged($event)">
+    <ion-segment-button class="segment_section medium-text" value="all">
+      All
+    </ion-segment-button>
+    <ion-segment-button class="segment_section medium-text" value="correct">
+      Correct
+    </ion-segment-button>
+    <ion-segment-button class="segment_section medium-text" value="incorrect">
+      InCorrect
+    </ion-segment-button>
+    <ion-segment-button class="segment_section medium-text" value="flagged">
+      Flagged
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'all'" (click)="clickonQuestion()">
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3 margin-right>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'correct'" (click)="clickonQuestion()">
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'incorrect'" (click)="clickonQuestion()">
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'flagged'" (click)="clickonQuestion()">
+      <p margin-left margin-right margin-top class="solid"></p>
+      <ion-item>
+        <ion-label col-9>
+          Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>correct            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <p margin-left margin-right class="solid-red"></p>
+      <ion-item>
+        <ion-label col-9>Lorem ipsum is simply dummy text of dummy-
+        </ion-label>
+        <ion-label col-3>incorrect            
+          <ion-icon ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline"></ion-icon>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

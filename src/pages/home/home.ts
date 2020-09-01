@@ -14,12 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  val: any = '50pt';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
 
+
+  postExam(){
+    this.navCtrl.push('PastExamPage');
+  }
+
+  openQOTDMetrics() {
+    this.navCtrl.push('QotdMetricsPage');
+  }
 }

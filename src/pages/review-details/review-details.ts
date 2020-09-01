@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-
 @IonicPage()
 @Component({
-  selector: 'page-entry',
-  templateUrl: 'entry.html',
+  selector: 'page-review-details',
+  templateUrl: 'review-details.html',
 })
-export class EntryPage {
+export class ReviewDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EntryPage');
+    console.log('ionViewDidLoad ReviewDetailsPage');
   }
 
-  openSignUp() {
-    this.navCtrl.setRoot('SignUpPage');
+  reviewQuestion(){
+    this.navCtrl.push('AllQuestionPage');
   }
 
-  openLogin() {
-    this.navCtrl.setRoot('LoginPage');
-  }
 }

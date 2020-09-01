@@ -10,7 +10,7 @@ import {Config} from "ionic-angular/index";
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = 'EntryPage';
+  rootPage = 'EntryPage'
   // rootPage = 'LoginPage';
 
   constructor(private translate: TranslateService, platform: Platform,

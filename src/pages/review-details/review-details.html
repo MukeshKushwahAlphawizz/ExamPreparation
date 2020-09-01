@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div style="text-align: center;padding: 10px;margin-top: 10%;">
+    <span class="top-text bigger-text bold-font text-black">24 August 2020</span>
+  </div>
+  <div style="text-align: center;padding: 10px;">
+    <span class="top-text small-text bold-font text-black">2:30 PM</span>
+  </div>
+  <div style="text-align: center;padding: 10px;">
+    <span class="top-text small-text bold-font">Question Metrics</span>
+  </div>
+  <div class="row white-bg" text-center margin-top padding-top padding-bottom>
+    <div col-6>
+      <div class="round-box" margin-bottom margin-top margin-left padding-bottom>
+        <label for="asIgo" margin-top class="medium-text bigger-text bold-font text-black">Exam Score</label><br>
+        <label for="asIgo" margin-top class=" bigger-text bold-font  text-green extra-large-text">50%</label><br>
+      </div>
+    </div>
+    <div col-6>
+      <div class="round-box" margin-bottom margin-top margin-right padding-bottom>
+        <label for="atTheEnd" margin-top class="medium-text bigger-text bold-font text-black">Time on Exam</label><br>
+        <label for="atTheEnd" margin-top class="bigger-text bold-font text-green extra-large-text ">1:33</label><br>
+      </div>
+    </div>
+  </div>
+
+  <ion-item (click)="reviewQuestion()" margin-top class="round-box">
+    <div item-start class="medium-text">Review all questions</div>
+    <ion-icon item-right no-margin name="ios-arrow-forward-outline"></ion-icon>
+  </ion-item>
+
+  <div class="more" margin-top>
+    <ion-list>
+      <ion-item>
+        <div class="medium-text bold-font">Science</div>
+        <span class="bold-font">2 of 3 correct</span>
+        <span item-right class="bold-font">67%</span>
+        <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <div style="border-bottom: 4px solid #df7700;"></div>
+      <ion-item>
+        <div class="medium-text bold-font">Nutrition</div>
+        <span class="bold-font">1 of 3 correct</span>
+        <span item-right class="bold-font">33%</span>
+        <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <div style="border-bottom: 4px solid #bf0707;"></div>
+      <ion-item>
+        <div class="medium-text bold-font">Program Design</div>
+        <span class="bold-font">2 of 2 correct</span>
+        <span item-right class="bold-font">100%</span>
+        <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <div style="border-bottom: 4px solid #1fd40b;"></div>
+      <ion-item>
+        <div class="medium-text bold-font">Education</div>
+        <span class="bold-font">1 of 2 correct</span>
+        <span item-right class="bold-font">50%</span>
+        <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+      </ion-item>
+      <div style="border-bottom: 4px solid #df7700;"></div>
+    </ion-list>
+  </div>
+</ion-content>

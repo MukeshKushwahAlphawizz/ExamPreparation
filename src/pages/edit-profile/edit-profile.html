@@ -1,15 +1,35 @@
-<!--
-  Generated template for the EditProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
-    <ion-title>edit-profile</ion-title>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <div text-center style="margin: 25pt">
+    <ion-icon class="text-green user-icon" name="md-person"></ion-icon>
+    <ion-icon class="text-green plus-icon" name="md-add-circle"></ion-icon>
+  </div>
 
+  <form padding>
+    <div class="medium-text">User Name</div>
+    <input class="input-data" type="text" placeholder="Username"/>
+
+    <div margin-top class="medium-text">Email</div>
+    <input class="input-data" type="email" placeholder="test@gmail.com"/>
+
+    <div margin-top class="medium-text">Change Password</div>
+    <input class="input-data" type="password" placeholder="Old Password"/>
+    <input class="input-data" margin-top margin-bottom type="password" placeholder="New Password"/>
+    <input class="input-data" type="password" placeholder="Confirm Password"/>
+
+    <div class="save-div">
+      <button (click)="save()" class="bold-font" ion-button full round>Save</button>
+    </div>
+  </form>
 </ion-content>

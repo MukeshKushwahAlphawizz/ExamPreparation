@@ -11,6 +11,11 @@
 </ion-header>
 
 <ion-content>
+  <!--<div class="progress-outer">
+    <div [ngStyle]="{minHeight:val}" class="progress-inner">
+      {{val.toString().substring(val.toString().length-4,2)}}%
+    </div>
+  </div>-->
   <div class="row" text-center style="padding: 20pt">
     <span><div>
       <img class="percent" src="assets/img/correctly.png">
@@ -25,31 +30,6 @@
       <div class="medium-text">Remaining</div>
     </div></span>
   </div>
-  <!--<div class="top-div" text-center>
-    <ion-item no-lines>
-      <ion-icon item-right class="bigger-text bold-font" name="close"></ion-icon>
-    </ion-item>
-    <div class="big-text bold-font">Lorem Ipsum</div>
-    <div class="medium-text text-green">Reference site about Lorem ipsum</div>
-    <div class="medium-text text-grey">Lorem ipsum reference site about, giving an its origins..</div>
-    <div class="btn-div">
-      <button ion-button full round class="bold-font medium-text">Answer Question</button>
-    </div>
-  </div>
-  <div class="row" text-center>
-    <div col-6>
-      <div class="round-box" margin-left margin-bottom margin-top>
-        <div margin-top class="medium-text">Days Until Exam</div>
-        <div margin-bottom class="medium-text bold-font text-green">Tap To Set</div>
-      </div>
-    </div>
-    <div col-6>
-      <div class="round-box" margin-right margin-bottom margin-top>
-        <div margin-top class="medium-text">QOTD Total Correct</div>
-        <div margin-bottom class="medium-text bold-font text-green">0</div>
-      </div>
-    </div>
-  </div>-->
   <div style="margin: 21px" class="round-box" text-center>
     <div class="text-grey small-text">Way to Practice</div>
     <div class="btn-div">
@@ -57,7 +37,7 @@
     </div>
   </div>
   <div class="more">
-    <ion-item no-lines>
+    <ion-item no-lines (click)="postExam()">
       <div class="medium-text">Post Exam Metrics</div>
       <ion-icon item-right name="ios-arrow-forward"></ion-icon>
     </ion-item>
@@ -67,7 +47,7 @@
       <ion-icon item-right name="ios-arrow-forward"></ion-icon>
     </ion-item>
     <div class="saperator"></div>
-    <ion-item no-lines>
+    <ion-item no-lines (click)="openQOTDMetrics()">
       <div class="medium-text">QOTD History</div>
       <ion-icon item-right name="ios-arrow-forward"></ion-icon>
     </ion-item>
