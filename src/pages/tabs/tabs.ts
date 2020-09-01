@@ -11,9 +11,9 @@ import { Tab1Root, Tab2Root, Tab3Root } from '../';
 })
 export class TabsPage {
   tab1Root: any = 'HomePage';
-  tab2Root: any = 'HomePage';
+  tab2Root: any = 'PracticePage';
   tab3Root: any = 'HomePage';
-  tab4Root: any = 'HomePage';
+  tab4Root: any = 'SettingPage';
 
   tab1Title = "Dashboard";
   tab2Title = "Practice";

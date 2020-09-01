@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Logo Name</ion-title>
+    <ion-buttons end padding-right>
+      <button ion-button icon-only class="small-text">
+        <img style="width: 60%" src="assets/img/premium.png">
+      </button>
+      <div text-center class="smallest-text text-white">Premium</div>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-item (click)="isSubject === 1 ? isSubject = 0 : isSubject = 1" margin-top class="round-box" no-lines>
+    <ion-icon no-margin item-left name="md-book"></ion-icon>
+    <div item-start class="medium-text">Select Subject</div>
+    <ion-icon item-right no-margin name="ios-arrow-down"></ion-icon>
+  </ion-item>
+  <div *ngIf="isSubject" class="round-box" style="padding: 2pt 0pt 4pt 12pt;">
+    <ion-item no-padding margin-top>Subject 1</ion-item>
+    <ion-item no-padding>Subject 2</ion-item>
+    <ion-item no-padding no-lines>Subject 3</ion-item>
+  </div>
+  <div class="row" text-center margin-top>
+    <div col-6>
+      <div class="round-box" padding margin-bottom margin-top>
+        <label for="asIgo" padding margin-top class="medium-text">Show Answer as I go</label><br>
+        <input margin-top type="radio" name="ShowAnswer" id="asIgo" value="asIgo">
+      </div>
+    </div>
+    <div col-6>
+      <div class="round-box" padding margin-bottom margin-top>
+        <label for="atTheEnd" margin-top class="medium-text">Show Answer at The End</label><br>
+        <input margin-top type="radio" name="ShowAnswer" id="atTheEnd" value="atTheEnd">
+      </div>
+    </div>
+  </div>
+
+  <ion-item (click)="isQuestions === 1 ? isQuestions = 0 : isQuestions = 1" margin-top class="round-box" no-lines>
+    <ion-icon no-margin item-left name="chatboxes"></ion-icon>
+    <div item-start class="medium-text">Questions</div>
+    <div item-right><span margin-right class="small-text">20 of 20</span><ion-icon no-margin name="ios-arrow-down"></ion-icon></div>
+  </ion-item>
+  <div *ngIf="isQuestions" class="round-box" style="padding: 2pt 0pt 4pt 12pt;">
+    <ion-item no-padding margin-top>Unanswered Questions</ion-item>
+    <ion-item no-padding>Incorrect Questions</ion-item>
+    <ion-item no-padding no-lines>Correct Questions</ion-item>
+  </div>
+
+  <ion-item no-lines class="medium-text" style="margin: 20pt 0">
+    <div item-left>Flagged Questions</div>
+    <div item-right class="row">
+      <span margin-right style="margin-top: 8px" class="small-text">20 of 20</span>
+      <ion-toggle no-margin no-padding [(ngModel)]="flaggedQuestion" (ionChange)="selectFlagged($event)"></ion-toggle>
+    </div>
+  </ion-item>
+
+  <div class="round-box" padding text-center>
+    <div margin-top>How Many Questions?</div>
+    <ion-slides padding slidesPerView="5">
+      <ion-slide>
+        <div class="bold-font">20</div>
+      </ion-slide>
+      <ion-slide>
+        <h1 class="bold-font">30</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1 class="text-green bold-font">40</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1 class="bold-font">50</h1>
+      </ion-slide>
+      <ion-slide>
+        <div class="bold-font">60</div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="round-box" padding text-center margin-top>
+    <div padding>Select Time Duration</div>
+    <ion-slides padding-top padding-bottom slidesPerView="5">
+      <ion-slide>
+        <div class="bold-font">10m</div>
+      </ion-slide>
+      <ion-slide>
+        <h3 class="bold-font">30m</h3>
+      </ion-slide>
+      <ion-slide>
+        <h1 class="text-green bold-font">40m</h1>
+      </ion-slide>
+      <ion-slide>
+        <h3 class="bold-font">50m</h3>
+      </ion-slide>
+      <ion-slide>
+        <div class="bold-font">60m</div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="start-btn">
+    <button ion-button full round>Start Quiz</button>
+  </div>
+</ion-content>

@@ -1,0 +1,16 @@
+page-practice {
+  .round-box{
+    box-shadow: 1px 3px 4px #c8c7cc;
+    border-radius: 10px;
+  }
+  .item-ios .toggle-ios{
+    padding: 0;
+    height: 20px;
+    .toggle-inner{
+      height: 15px;
+    }
+  }
+  .start-btn{
+    margin: 20pt 55pt;
+  }
+}

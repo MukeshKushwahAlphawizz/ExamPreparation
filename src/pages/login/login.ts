@@ -57,4 +57,8 @@ export class LoginPage {
   login() {
     this.navCtrl.setRoot('TabsPage')
   }
+
+  forgotPass() {
+    this.navCtrl.push('ForgotPasswordPage');
+  }
 }

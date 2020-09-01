@@ -2,6 +2,7 @@
 .text-green{color: #1DBF73}
 .text-grey {color: #999;}
 .text-white {color: white;}
+.text-black {color: black;}
 .smallest-text{font-size: 0.8rem;}
 .smaller-text{font-size: 1rem;}
 .small-text{font-size: 1.2rem;}
@@ -34,4 +35,7 @@ button{
 }
 .toolbar-title-ios, .toolbar-title-md{
   color: white;
+}
+div, ion-icon{
+  color: #404040;
 }
