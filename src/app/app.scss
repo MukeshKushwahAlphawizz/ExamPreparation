@@ -10,6 +10,17 @@
 .big-text{font-size: 1.7rem;}
 .bigger-text{font-size: 2rem;}
 .bold-font{font-weight: bold}
+.grey-bg{background: #F8F8F8}
+div, ion-icon, .item-datetime .label{
+  color: #404040;
+}
+.back-button-icon-md{
+  color: white;
+}
+.back-button-icon-ios{
+  color: white;
+  padding: 5pt 10pt;
+}
 .error-message {
   color: red;
   text-align: left;
@@ -36,6 +47,12 @@ button{
 .toolbar-title-ios, .toolbar-title-md{
   color: white;
 }
-div, ion-icon{
-  color: #404040;
+.alert-button .button-inner {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center !important;
+}
+.alert-sub-title, .alert-title {
+  text-align: center;
 }

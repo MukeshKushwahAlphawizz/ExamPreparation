@@ -11,7 +11,21 @@
 </ion-header>
 
 <ion-content>
-  <div class="top-div" text-center>
+  <div class="row" text-center style="padding: 20pt">
+    <span><div>
+      <img class="percent" src="assets/img/correctly.png">
+      <div class="medium-text">Correctly</div>
+    </div></span>
+    <span style="margin: 0 5pt"><div>
+      <img class="percent" src="assets/img/incorrect.png">
+      <div class="medium-text">Incorrect</div>
+    </div></span>
+    <span><div>
+      <img class="percent" src="assets/img/remaining.png">
+      <div class="medium-text">Remaining</div>
+    </div></span>
+  </div>
+  <!--<div class="top-div" text-center>
     <ion-item no-lines>
       <ion-icon item-right class="bigger-text bold-font" name="close"></ion-icon>
     </ion-item>
@@ -35,7 +49,7 @@
         <div margin-bottom class="medium-text bold-font text-green">0</div>
       </div>
     </div>
-  </div>
+  </div>-->
   <div style="margin: 21px" class="round-box" text-center>
     <div class="text-grey small-text">Way to Practice</div>
     <div class="btn-div">
@@ -57,5 +71,11 @@
       <div class="medium-text">QOTD History</div>
       <ion-icon item-right name="ios-arrow-forward"></ion-icon>
     </ion-item>
+  </div>
+  <div class="upgrade-btn" text-center>
+    <button ion-button round small>
+      <ion-icon class="text-white" name="md-arrow-round-up"></ion-icon>
+      <span margin-left>Upgrade Now</span>
+    </button>
   </div>
 </ion-content>

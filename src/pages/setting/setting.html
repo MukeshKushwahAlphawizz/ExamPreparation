@@ -11,12 +11,64 @@
 </ion-header>
 
 <ion-content>
-  <ion-item no-lines padding class="bottom-saperator">
+  <ion-item (click)="accountInfo()" no-lines class="bottom-saperator user grey-bg">
     <img no-margin class="user-img" item-left src="assets/img/men.png">
     <div no-margin item-start>
-      <div class="big-text">Brayden aaron</div>
-      <div class="medium-text">braydenaaron@mail.com</div>
+      <div class="medium-text">Brayden aaron</div>
+      <div class="small-text">braydenaaron@mail.com</div>
     </div>
     <ion-icon item-right name="ios-arrow-forward"></ion-icon>
   </ion-item>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Download Content</div>
+    <div item-right no-margin class="text-green medium-text">Download</div>
+  </ion-item>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Upgrade Plan</div>
+    <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+  <ion-item (click)="reset()" no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Reset</div>
+    <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+
+  <div padding margin-top class="big-text bold-font">Study Reminders</div>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <ion-label class="medium-text text-black">Study Notification Time</ion-label>
+    <ion-datetime class="medium-text" item-right displayFormat="hh:mm A" [(ngModel)]="studyNotificationTime"></ion-datetime>
+    <!--<div item-right no-margin class="medium-text">07:28AM</div>-->
+  </ion-item>
+  <ion-item (click)="showCheckbox()" no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Study Reminder Frequency</div>
+    <div item-right no-margin class="medium-text">
+      <span margin-right>Daily</span><ion-icon name="ios-arrow-forward"></ion-icon>
+    </div>
+  </ion-item>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <ion-label class="medium-text">Reminder for QOTD</ion-label>
+    <ion-toggle item-right no-margin no-padding [(ngModel)]="remQOTD" (ionChange)="selectRemQOTD($event)"></ion-toggle>
+  </ion-item>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <ion-label class="medium-text">Show Badge if Not Completed</ion-label>
+    <ion-toggle item-right no-margin no-padding [(ngModel)]="showBadge" (ionChange)="selectBadge($event)"></ion-toggle>
+  </ion-item>
+  <ion-item no-lines class="grey-bg">
+    <ion-label class="medium-text">Scheduled Exam Date</ion-label>
+    <!--<div item-right no-margin class="medium-text">Tap To Set</div>-->
+    <ion-datetime class="medium-text" item-right displayFormat="DD-MMMM-YYYY" [(ngModel)]="examDate"></ion-datetime>
+  </ion-item>
+
+  <div padding margin-top class="big-text bold-font">Support</div>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Terms of Service</div>
+    <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+  <ion-item no-lines class="bottom-saperator grey-bg">
+    <div class="medium-text">Privacy Policy</div>
+    <ion-icon item-right name="ios-arrow-forward"></ion-icon>
+  </ion-item>
+
+  <div class="logout-div" text-center>
+    <button ion-button round full>Log Out</button>
+  </div>
 </ion-content>
